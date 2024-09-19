@@ -1,0 +1,28 @@
+{
+  "name": "nanopay-supabase",
+  "version": "1.0.0",
+  "description": "NanoPay.me Supabase project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "status": "supabase status",
+    "setup": "supabase start && supabase db reset && supabase link --project-ref <your-supabase-project-ref>",
+    "start": "supabase start",
+    "stop": "supabase stop",
+    "diff": "supabase db diff --schema public",
+    "pull": "supabase db pull",
+    "push": "supabase db push",
+    "types": "supabase gen types typescript --schema public"
+  },
+  "keywords": [
+    "nanopay",
+    "nanocurrency",
+    "supabase",
+    "database",
+    "backend"
+  ],
+  "author": "anarkrypto <anarkrypto@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "supabase": "^1.192.5"
+  }
+}
