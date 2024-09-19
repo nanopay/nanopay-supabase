@@ -175,11 +175,8 @@ To deploy your project:
   npx supabase --help
   ```
 
-```
-
 - [Supabase Official Documentation](https://supabase.io/docs/guides/database)
 
 ---
 
 For any questions or issues, please open an issue in this repository or consult the Supabase documentation.
-```
