@@ -5,10 +5,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "status": "supabase status",
-    "setup": "supabase start && supabase db reset && supabase link --project-ref <your-supabase-project-ref>",
+    "setup": "supabase start && supabase db reset",
+    "reset": "supabase db reset",
     "start": "supabase start",
     "stop": "supabase stop",
     "diff": "supabase db diff --schema public",
+    "new": "supabase migrate new",
+    "link": "supabase link",
     "pull": "supabase db pull",
     "push": "supabase db push",
     "types": "supabase gen types typescript --schema public"
