@@ -2,6 +2,9 @@
 
 This repository contains the Supabase configuration and migrations for the NanoPay.me project.
 
+![image](https://github.com/user-attachments/assets/9533527c-e578-4322-b918-db32bb675be3)
+
+
 ## Table of Contents
 
 - [NanoPay.me Supabase Configuration](#nanopayme-supabase-configuration)
