@@ -113,24 +113,24 @@ Follow this workflow when making changes to the database:
 - **Show diff between migration files and local instance:**
 
   ```bash
-  npm run diff --local
+  npm run diff
   ```
 
-- **Create a new migration from current local diff:**
+- **Create a migration sql file with current local diff:**
 
   ```bash
-  npm run diff --local -f "update_table_products"
+  npm run migrate "update_table_products"
   ```
 
-- **Create an empty migration file:**
+- **Create an empty migration sql file:**
 
   ```bash
   npm run new "update_table_products"
   ```
 
-- **Update Supabase types for TypeScript:**
+- **Generate database types for TypeScript:**
   ```bash
-  npm run types > ../src/types/database.ts
+  npm run types
   ```
 
 ### Remote Management
@@ -144,7 +144,13 @@ Follow this workflow when making changes to the database:
 - **Show diff between migration files and remote instance:**
 
   ```bash
-  npm run diff --remote
+  npm run diff-remote
+  ```
+
+- **Create a migration sql file with current remote diff:**
+
+  ```bash
+  npm run migrate-remote "update_table_products"
   ```
 
 - **Push changes to remote instance:**

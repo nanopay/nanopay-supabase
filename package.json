@@ -9,12 +9,15 @@
     "reset": "supabase db reset",
     "start": "supabase start",
     "stop": "supabase stop",
-    "diff": "supabase db diff --schema public",
+    "diff": "supabase db diff --schema public --local --use-migra",
+    "diff-remote": "supabase db diff --schema public --linked --use-migra",
+    "migrate": "supabase db diff --schema public --local --use-migra -f",
+    "migrate-remote": "supabase db diff --schema public --linked --use-migra -f",
     "new": "supabase migrate new",
     "link": "supabase link",
     "pull": "supabase db pull",
     "push": "supabase db push",
-    "types": "supabase gen types typescript --schema public"
+    "types": "supabase gen types --lang typescript --schema public --local"
   },
   "keywords": [
     "nanopay",
