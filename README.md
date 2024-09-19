@@ -11,6 +11,7 @@ This repository contains the Supabase configuration and migrations for the NanoP
   - [Getting Started](#getting-started)
     - [Installation](#installation)
     - [Setup](#setup)
+    - [External Authentication (Optional):](#external-authentication-optional)
   - [Development Workflow](#development-workflow)
   - [Commands](#commands)
     - [Local Management](#local-management)
@@ -49,6 +50,26 @@ Initialize your local Supabase instance with the current migrations:
 npm run setup
 ```
 
+### External Authentication (Optional):
+
+Configure External Authentication Methods:
+If you need to use external authentication providers (such as GitHub, Google, etc.), update the config.toml file located at the root of the project. Add or modify the relevant sections for each auth provider you want to enable. For example:
+
+```toml
+[auth.external.github]
+enabled = true
+client_id = "your_client_id"
+secret = "your_client_secret"
+redirect_uri = "http://localhost:54321/auth/v1/callback"
+
+# Add other providers as needed
+# [auth.external.google]
+# [auth.external.facebook]
+# etc.
+```
+
+Make sure to replace the placeholder values with your actual OAuth credentials for each provider. For more information on configuring external authentication providers, refer to the [Supabase documentation](https://supabase.com/docs/guides/auth/auth-github).
+
 ## Development Workflow
 
 Follow this workflow when making changes to the database:
@@ -63,36 +84,43 @@ Follow this workflow when making changes to the database:
 ### Local Management
 
 - **Check status of local Supabase instance:**
+
   ```bash
   npm run status
   ```
 
 - **Start local Supabase instance:**
+
   ```bash
   npm run start
   ```
 
 - **Stop local Supabase instance:**
+
   ```bash
   npm run stop
   ```
 
 - **Reset local Supabase instance:**
+
   ```bash
   npm run reset
   ```
 
 - **Show diff between migration files and local instance:**
+
   ```bash
   npm run diff --local
   ```
 
 - **Create a new migration from current local diff:**
+
   ```bash
   npm run diff --local -f "update_table_products"
   ```
 
 - **Create an empty migration file:**
+
   ```bash
   npm run new "update_table_products"
   ```
@@ -105,16 +133,19 @@ Follow this workflow when making changes to the database:
 ### Remote Management
 
 - **Link remote Supabase instance:**
+
   ```bash
   npm run link
   ```
 
 - **Show diff between migration files and remote instance:**
+
   ```bash
   npm run diff --remote
   ```
 
 - **Push changes to remote instance:**
+
   ```bash
   npm run push
   ```
@@ -132,6 +163,7 @@ To deploy your project:
 1. Create a new project in the [Supabase dashboard](https://app.supabase.io/)
 2. Link your local instance to the remote instance using `npm run link`
 3. Push your changes to the remote instance with `npm run push`
+4. When using external authentication providers, make sure to update the env variables in the Supabase dashboard.
 
 ## Additional Resources
 
@@ -139,8 +171,12 @@ To deploy your project:
   ```bash
   npx supabase --help
   ```
+
+```
+
 - [Supabase Official Documentation](https://supabase.io/docs/guides/database)
 
 ---
 
 For any questions or issues, please open an issue in this repository or consult the Supabase documentation.
+```
