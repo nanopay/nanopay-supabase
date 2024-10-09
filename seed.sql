@@ -22,6 +22,11 @@ VALUES
     ('Demo Service', 'demo-service', '00000000-0000-0000-0000-000000000000', 'https://nanopay.me');
 
 INSERT INTO
+    services (name, slug, user_id, website)
+VALUES
+    ('Sponsors Service', 'sponsors-service', '00000000-0000-0000-0000-000000000000', 'https://nanopay.me');
+
+INSERT INTO
     reserved_names (name)
 VALUES
     ('about'),
