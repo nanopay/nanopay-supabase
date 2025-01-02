@@ -4,7 +4,6 @@ This repository contains the Supabase configuration and migrations for the NanoP
 
 ![image](https://github.com/user-attachments/assets/9533527c-e578-4322-b918-db32bb675be3)
 
-
 ## Table of Contents
 
 - [NanoPay.me Supabase Configuration](#nanopayme-supabase-configuration)
@@ -144,13 +143,13 @@ Follow this workflow when making changes to the database:
 - **Show diff between migration files and remote instance:**
 
   ```bash
-  npm run diff-remote
+  npm run diff:remote
   ```
 
 - **Create a migration sql file with current remote diff:**
 
   ```bash
-  npm run migrate-remote "update_table_products"
+  npm run migrate:remote "update_table_products"
   ```
 
 - **Push changes to remote instance:**
@@ -177,6 +176,7 @@ To deploy your project:
 ## Additional Resources
 
 - For more commands, run:
+
   ```bash
   npx supabase --help
   ```
